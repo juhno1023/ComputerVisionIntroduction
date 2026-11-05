@@ -1,0 +1,144 @@
+Loading CIFAR-10 dataset
+Training data shape: (50000, 3072)
+Training labels shape: (50000,)
+Test data shape: (10000, 3072)
+Test labels shape: (10000,)
+Performing 5-fold Cross-Validation
+Evaluating L1 metric via cross-validation:
+  Fold 1/5
+  Fold 2/5
+  Fold 3/5
+  Fold 4/5
+  Fold 5/5
+Metric: L1, k: 1, Cross-validation Accuracy: 0.370
+Metric: L1, k: 3, Cross-validation Accuracy: 0.376
+Metric: L1, k: 5, Cross-validation Accuracy: 0.379
+Metric: L1, k: 7, Cross-validation Accuracy: 0.377
+Metric: L1, k: 9, Cross-validation Accuracy: 0.375
+Metric: L1, k: 13, Cross-validation Accuracy: 0.372
+Metric: L1, k: 15, Cross-validation Accuracy: 0.369
+Metric: L1, k: 17, Cross-validation Accuracy: 0.367
+Metric: L1, k: 19, Cross-validation Accuracy: 0.366
+Metric: L1, k: 21, Cross-validation Accuracy: 0.364
+Metric: L1, k: 23, Cross-validation Accuracy: 0.362
+Metric: L1, k: 25, Cross-validation Accuracy: 0.360
+Metric: L1, k: 27, Cross-validation Accuracy: 0.360
+Metric: L1, k: 29, Cross-validation Accuracy: 0.359
+Metric: L1, k: 31, Cross-validation Accuracy: 0.356
+Metric: L1, k: 33, Cross-validation Accuracy: 0.355
+Metric: L1, k: 35, Cross-validation Accuracy: 0.355
+Metric: L1, k: 37, Cross-validation Accuracy: 0.351
+Metric: L1, k: 39, Cross-validation Accuracy: 0.350
+Evaluating L2 metric via cross-validation:
+  Fold 1/5
+  Fold 2/5
+  Fold 3/5
+  Fold 4/5
+  Fold 5/5
+Metric: L2, k: 1, Cross-validation Accuracy: 0.338
+Metric: L2, k: 3, Cross-validation Accuracy: 0.344
+Metric: L2, k: 5, Cross-validation Accuracy: 0.346
+Metric: L2, k: 7, Cross-validation Accuracy: 0.346
+Metric: L2, k: 9, Cross-validation Accuracy: 0.344
+Metric: L2, k: 13, Cross-validation Accuracy: 0.337
+Metric: L2, k: 15, Cross-validation Accuracy: 0.334
+Metric: L2, k: 17, Cross-validation Accuracy: 0.332
+Metric: L2, k: 19, Cross-validation Accuracy: 0.330
+Metric: L2, k: 21, Cross-validation Accuracy: 0.328
+Metric: L2, k: 23, Cross-validation Accuracy: 0.328
+Metric: L2, k: 25, Cross-validation Accuracy: 0.327
+Metric: L2, k: 27, Cross-validation Accuracy: 0.324
+Metric: L2, k: 29, Cross-validation Accuracy: 0.324
+Metric: L2, k: 31, Cross-validation Accuracy: 0.323
+Metric: L2, k: 33, Cross-validation Accuracy: 0.321
+Metric: L2, k: 35, Cross-validation Accuracy: 0.320
+Metric: L2, k: 37, Cross-validation Accuracy: 0.319
+Metric: L2, k: 39, Cross-validation Accuracy: 0.318
+Accuracy change rate by k (L1):
+  k=1 -> k=3: +1.58%
+  k=3 -> k=5: +0.82%
+  k=5 -> k=7: -0.40%
+  k=7 -> k=9: -0.70%
+  k=9 -> k=13: -0.80%
+  k=13 -> k=15: -0.68%
+  k=15 -> k=17: -0.70%
+  k=17 -> k=19: -0.20%
+  k=19 -> k=21: -0.48%
+  k=21 -> k=23: -0.59%
+  k=23 -> k=25: -0.49%
+  k=25 -> k=27: -0.11%
+  k=27 -> k=29: -0.37%
+  k=29 -> k=31: -0.62%
+  k=31 -> k=33: -0.32%
+  k=33 -> k=35: -0.18%
+  k=35 -> k=37: -0.86%
+  k=37 -> k=39: -0.32%
+Accuracy change rate by k (L2):
+  k=1 -> k=3: +1.67%
+  k=3 -> k=5: +0.59%
+  k=5 -> k=7: -0.01%
+  k=7 -> k=9: -0.57%
+  k=9 -> k=13: -1.95%
+  k=13 -> k=15: -0.85%
+  k=15 -> k=17: -0.64%
+  k=17 -> k=19: -0.62%
+  k=19 -> k=21: -0.72%
+  k=21 -> k=23: +0.09%
+  k=23 -> k=25: -0.41%
+  k=25 -> k=27: -0.72%
+  k=27 -> k=29: -0.25%
+  k=29 -> k=31: -0.30%
+  k=31 -> k=33: -0.48%
+  k=33 -> k=35: -0.47%
+  k=35 -> k=37: -0.09%
+  k=37 -> k=39: -0.51%
+Best Cross-Validation L1 Accuracy: 0.379 with k=5
+Best Cross-Validation L2 Accuracy: 0.346 with k=5
+Evaluating the best models on the TEST set
+Computing L1 distances for TEST set
+Test L1 Accuracy (k=5): 0.392
+Evaluation metrics (L1, k=5):
+  Accuracy : 0.392
+  Precision: 0.456 (macro)
+  Recall   : 0.392 (macro)
+  F1-score : 0.389 (macro)
+              precision    recall  f1-score   support
+
+       plane      0.450     0.544     0.493      1000
+         car      0.684     0.264     0.381      1000
+        bird      0.264     0.417     0.324      1000
+         cat      0.313     0.216     0.256      1000
+        deer      0.263     0.516     0.349      1000
+         dog      0.429     0.312     0.361      1000
+        frog      0.376     0.350     0.363      1000
+       horse      0.645     0.315     0.423      1000
+        ship      0.431     0.699     0.533      1000
+       truck      0.704     0.288     0.409      1000
+
+    accuracy                          0.392     10000
+   macro avg      0.456     0.392     0.389     10000
+weighted avg      0.456     0.392     0.389     10000
+
+Computing L2 distances for TEST set
+Test L2 Accuracy (k=5): 0.355
+Evaluation metrics (L2, k=5):
+  Accuracy : 0.355
+  Precision: 0.437 (macro)
+  Recall   : 0.356 (macro)
+  F1-score : 0.345 (macro)
+              precision    recall  f1-score   support
+
+       plane      0.463     0.492     0.477      1000
+         car      0.713     0.186     0.295      1000
+        bird      0.244     0.400     0.303      1000
+         cat      0.303     0.213     0.250      1000
+        deer      0.246     0.530     0.336      1000
+         dog      0.406     0.276     0.329      1000
+        frog      0.331     0.329     0.330      1000
+       horse      0.610     0.252     0.357      1000
+        ship      0.383     0.701     0.495      1000
+       truck      0.667     0.176     0.278      1000
+
+    accuracy                          0.355     10000
+   macro avg      0.437     0.356     0.345     10000
+weighted avg      0.437     0.355     0.345     10000
