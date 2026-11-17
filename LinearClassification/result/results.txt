@@ -1,0 +1,323 @@
+Seed: 42; W ~ Normal(0, 0.001^2); b = 0; no training
+X @ W + b: (N, 3072) @ (3072, 10) + (1, 10) = (N, 10)
+Equivalent column-vector formula: f(x) = W.T @ x + b.T
+W rows: RGB pixels; W columns: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
+
+[W] Weight matrix: (3072, 10)
+[[ 3.047171e-04 -1.039984e-03  7.504512e-04  9.405647e-04 -1.951035e-03 -1.302180e-03  1.278404e-04 -3.162426e-04 -1.680116e-05 -8.530439e-04]
+ [ 8.793980e-04  7.777919e-04  6.603070e-05  1.127241e-03  4.675093e-04 -8.592925e-04  3.687508e-04 -9.588826e-04  8.784503e-04 -4.992591e-05]
+ [-1.848624e-04 -6.809295e-04  1.222541e-03 -1.545295e-04 -4.283278e-04 -3.521336e-04  5.323092e-04  3.654441e-04  4.127326e-04  4.308210e-04]
+ [ 2.141648e-03 -4.064150e-04 -5.122427e-04 -8.137727e-04  6.159794e-04  1.128972e-03 -1.139475e-04 -8.401565e-04 -8.244812e-04  6.505928e-04]
+ [ 7.432542e-04  5.431543e-04 -6.655097e-04  2.321613e-04  1.166858e-04  2.186886e-04  8.714288e-04  2.235955e-04  6.789136e-04  6.757907e-05]
+ ...
+ [ 1.165713e-03  1.850327e-04 -5.993922e-04 -1.347062e-03 -1.530261e-03  3.229781e-04  7.931989e-04 -8.902204e-04  2.552636e-04 -1.742187e-04]
+ [ 7.182675e-04  8.660769e-04 -2.266213e-03  1.032135e-03  2.521970e-04 -5.313560e-04 -5.034628e-04  3.174740e-05 -5.037488e-04 -9.370036e-04]
+ [-7.077977e-04 -1.040162e-03  1.346568e-03  5.590482e-05  2.252843e-03  3.710764e-04  5.889083e-04 -1.061605e-03 -2.182089e-04  7.269131e-05]
+ [-6.372486e-04 -4.648010e-04  4.201478e-04  4.397598e-04 -1.336945e-03  2.837409e-04  5.530152e-04 -5.902768e-04 -6.919138e-04  4.414691e-04]
+ [-2.573087e-03  2.084471e-06  1.634428e-03 -2.596359e-03  8.228749e-04  5.444224e-04 -1.438101e-03  5.204889e-04  1.001420e-03 -1.176617e-03]]
+(... indicates omitted entries; full values are in weights.csv)
+
+[b] Bias row vector: (1, 10)
+[[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+
+Test #0: true=cat, predicted=cat
+Class               Score  Probability
+airplane        -0.007191     0.097360
+automobile       0.034275     0.101482
+bird             0.022194     0.100263
+cat              0.076948     0.105906
+deer             0.008977     0.098947
+dog             -0.016593     0.096449
+frog             0.002516     0.098310
+horse            0.032289     0.101281
+ship             0.013412     0.099387
+truck            0.025694     0.100615
+Probability sum: 1.000000000000
+SVM hinge loss: 8.423043
+
+Test #1: true=ship, predicted=cat
+Class               Score  Probability
+airplane         0.008274     0.099858
+automobile       0.050864     0.104203
+bird             0.001142     0.099148
+cat              0.072940     0.106529
+deer             0.005696     0.099601
+dog             -0.062969     0.092991
+frog            -0.033775     0.095746
+horse            0.012940     0.100325
+ship             0.015368     0.100569
+truck            0.019943     0.101030
+Probability sum: 1.000000000000
+SVM hinge loss: 8.936745
+
+Test #2: true=ship, predicted=cat
+Class               Score  Probability
+airplane        -0.003001     0.099101
+automobile       0.028777     0.102301
+bird             0.002379     0.099636
+cat              0.053982     0.104912
+deer            -0.016855     0.097738
+dog             -0.052837     0.094283
+frog            -0.021368     0.097297
+horse            0.023405     0.101753
+ship             0.016684     0.101071
+truck            0.024934     0.101908
+Probability sum: 1.000000000000
+SVM hinge loss: 8.889263
+
+Test #3: true=airplane, predicted=cat
+Class               Score  Probability
+airplane         0.006087     0.099347
+automobile       0.029016     0.101652
+bird            -0.015550     0.097221
+cat              0.071748     0.106090
+deer             0.016337     0.100371
+dog             -0.054772     0.093482
+frog            -0.013373     0.097433
+horse            0.026915     0.101438
+ship             0.018667     0.100605
+truck            0.035974     0.102361
+Probability sum: 1.000000000000
+SVM hinge loss: 9.060178
+
+Test #4: true=frog, predicted=cat
+Class               Score  Probability
+airplane         0.007829     0.099168
+automobile       0.029126     0.101303
+bird             0.019486     0.100331
+cat              0.050444     0.103485
+deer             0.022662     0.100650
+dog             -0.033476     0.095155
+frog            -0.012445     0.097178
+horse            0.026918     0.101079
+ship             0.008639     0.099248
+truck            0.039932     0.102403
+Probability sum: 1.000000000000
+SVM hinge loss: 9.283569
+
+Test #5: true=frog, predicted=cat
+Class               Score  Probability
+airplane         0.007084     0.099580
+automobile       0.038425     0.102751
+bird            -0.009223     0.097970
+cat              0.061474     0.105147
+deer             0.012218     0.100093
+dog             -0.031043     0.095855
+frog            -0.011468     0.097750
+horse            0.014705     0.100342
+ship             0.001666     0.099042
+truck            0.025884     0.101470
+Probability sum: 1.000000000000
+SVM hinge loss: 9.224401
+
+Test #6: true=automobile, predicted=horse
+Class               Score  Probability
+airplane         0.004638     0.099804
+automobile       0.016992     0.101045
+bird            -0.007488     0.098601
+cat              0.019765     0.101325
+deer             0.016607     0.101006
+dog             -0.027501     0.096648
+frog            -0.015454     0.097819
+horse            0.044307     0.103843
+ship             0.004200     0.099760
+truck            0.008085     0.100149
+Probability sum: 1.000000000000
+SVM hinge loss: 8.894232
+
+Test #7: true=frog, predicted=cat
+Class               Score  Probability
+airplane         0.024528     0.101125
+automobile       0.031312     0.101814
+bird            -0.000064     0.098669
+cat              0.057078     0.104471
+deer             0.015770     0.100244
+dog             -0.044580     0.094373
+frog            -0.008295     0.097860
+horse            0.015246     0.100191
+ship             0.011556     0.099822
+truck            0.027555     0.101432
+Probability sum: 1.000000000000
+SVM hinge loss: 9.213054
+
+Test #8: true=cat, predicted=cat
+Class               Score  Probability
+airplane         0.024492     0.100383
+automobile       0.050308     0.103008
+bird             0.015838     0.099518
+cat              0.080123     0.106125
+deer             0.022877     0.100221
+dog             -0.060037     0.092246
+frog            -0.015642     0.096434
+horse            0.032542     0.101194
+ship             0.024355     0.100369
+truck            0.025701     0.100504
+Probability sum: 1.000000000000
+SVM hinge loss: 8.399332
+
+Test #9: true=automobile, predicted=cat
+Class               Score  Probability
+airplane         0.015886     0.100574
+automobile       0.027161     0.101714
+bird            -0.005405     0.098455
+cat              0.066791     0.105826
+deer             0.044677     0.103511
+dog             -0.065035     0.092756
+frog            -0.029390     0.096122
+horse            0.018910     0.100878
+ship             0.009158     0.099899
+truck            0.012799     0.100264
+Probability sum: 1.000000000000
+SVM hinge loss: 8.823942
+
+Test #10: true=airplane, predicted=cat
+Class               Score  Probability
+airplane         0.011283     0.099418
+automobile       0.039694     0.102283
+bird             0.016389     0.099927
+cat              0.077986     0.106276
+deer             0.019080     0.100196
+dog             -0.042378     0.094224
+frog            -0.016504     0.096694
+horse            0.025635     0.100855
+ship             0.011167     0.099407
+truck            0.024287     0.100719
+Probability sum: 1.000000000000
+SVM hinge loss: 9.053804
+
+Test #11: true=truck, predicted=automobile
+Class               Score  Probability
+airplane         0.004720     0.099641
+automobile       0.061806     0.105494
+bird            -0.007260     0.098454
+cat              0.057556     0.105047
+deer             0.021424     0.101319
+dog             -0.061103     0.093293
+frog            -0.026334     0.096594
+horse            0.010578     0.100226
+ship            -0.000294     0.099143
+truck            0.016163     0.100788
+Probability sum: 1.000000000000
+SVM hinge loss: 8.915631
+
+Test #12: true=dog, predicted=automobile
+Class               Score  Probability
+airplane         0.027463     0.100829
+automobile       0.050656     0.103195
+bird             0.011811     0.099263
+cat              0.043354     0.102444
+deer             0.026002     0.100682
+dog             -0.019529     0.096201
+frog            -0.007443     0.097370
+horse            0.026095     0.100691
+ship             0.005521     0.098641
+truck            0.026020     0.100684
+Probability sum: 1.000000000000
+SVM hinge loss: 9.385243
+
+Test #13: true=horse, predicted=cat
+Class               Score  Probability
+airplane         0.017502     0.100454
+automobile       0.030842     0.101803
+bird             0.009429     0.099647
+cat              0.041358     0.102880
+deer             0.001252     0.098835
+dog             -0.002140     0.098500
+frog            -0.008514     0.097874
+horse            0.018417     0.100546
+ship             0.021468     0.100853
+truck           -0.001057     0.098607
+Probability sum: 1.000000000000
+SVM hinge loss: 8.944383
+
+Test #14: true=truck, predicted=cat
+Class               Score  Probability
+airplane         0.005505     0.099977
+automobile       0.027537     0.102205
+bird            -0.002496     0.099181
+cat              0.060866     0.105668
+deer            -0.001951     0.099235
+dog             -0.035150     0.095994
+frog            -0.025211     0.096953
+horse            0.008153     0.100243
+ship            -0.001086     0.099321
+truck            0.017893     0.101224
+Probability sum: 1.000000000000
+SVM hinge loss: 8.875128
+
+Test #15: true=ship, predicted=cat
+Class               Score  Probability
+airplane         0.024766     0.100606
+automobile       0.036680     0.101811
+bird             0.014518     0.099580
+cat              0.070486     0.105312
+deer             0.008880     0.099020
+dog             -0.022420     0.095969
+frog            -0.020307     0.096172
+horse            0.029271     0.101060
+ship             0.003812     0.098519
+truck            0.038055     0.101951
+Probability sum: 1.000000000000
+SVM hinge loss: 9.145623
+
+Test #16: true=dog, predicted=cat
+Class               Score  Probability
+airplane         0.009986     0.098949
+automobile       0.044940     0.102469
+bird            -0.001110     0.097857
+cat              0.071632     0.105241
+deer             0.013598     0.099307
+dog             -0.030646     0.095009
+frog             0.014906     0.099437
+horse            0.006120     0.098567
+ship             0.011469     0.099096
+truck            0.060431     0.104068
+Probability sum: 1.000000000000
+SVM hinge loss: 9.507789
+
+Test #17: true=horse, predicted=cat
+Class               Score  Probability
+airplane         0.015068     0.099817
+automobile       0.038984     0.102233
+bird             0.005750     0.098891
+cat              0.068522     0.105297
+deer             0.044234     0.102771
+dog             -0.054961     0.093066
+frog            -0.008340     0.097507
+horse            0.007458     0.099060
+ship             0.000089     0.098333
+truck            0.046720     0.103027
+Probability sum: 1.000000000000
+SVM hinge loss: 9.088948
+
+Test #18: true=ship, predicted=automobile
+Class               Score  Probability
+airplane         0.005871     0.099771
+automobile       0.055602     0.104858
+bird            -0.024178     0.096817
+cat              0.052765     0.104561
+deer             0.012450     0.100429
+dog             -0.061766     0.093246
+frog            -0.007792     0.098417
+horse            0.012170     0.100401
+ship             0.018579     0.101047
+truck            0.012700     0.100454
+Probability sum: 1.000000000000
+SVM hinge loss: 8.890606
+
+Test #19: true=frog, predicted=cat
+Class               Score  Probability
+airplane        -0.000951     0.098765
+automobile       0.041653     0.103063
+bird             0.018971     0.100752
+cat              0.044625     0.103370
+deer             0.029594     0.101828
+dog             -0.030954     0.095845
+frog            -0.009291     0.097944
+horse           -0.007995     0.098071
+ship             0.005723     0.099426
+truck            0.020779     0.100934
+Probability sum: 1.000000000000
+SVM hinge loss: 9.205061
+
+Average SVM hinge loss: 9.007999
